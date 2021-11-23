@@ -15,10 +15,44 @@
     <script type="text/javascript">
         $('document').ready(function () {
             console.log("jQuery is successfully running.");
-            $('ul li').hide();
+            $('h5').hide();
             console.log('all answers are being hidden');
-            $('ol li').click(function () {
-                $('ul li').fadeIn();
+            $('ol li').hover(function(){
+                $('ol li').css('cursor', 'pointer');
+                $('ol li h5').css('cursor', 'auto');
+            })
+            // Total answer reveal btn
+            $('button').click(function(){
+                $('h5').fadeIn();
+            })
+
+            // Answer reveal for individual steps
+            $('#step1').click(function () {
+                $('#answer1').fadeIn();
+            });
+            $('#step2').click(function () {
+                $('#answer2').fadeIn();
+            });
+            $('#step3').click(function () {
+                $('#answer3').fadeIn();
+            });
+            $('#step4').click(function () {
+                $('#answer4').fadeIn();
+            });
+            $('#step5').click(function () {
+                $('#answer5').fadeIn();
+            });
+            $('#step6').click(function () {
+                $('#answer6').fadeIn();
+            });
+            $('#step7').click(function () {
+                $('#answer7').fadeIn();
+            });
+            $('#step8').click(function () {
+                $('#answer8').fadeIn();
+            });
+            $('#step9').click(function () {
+                $('#answer9').fadeIn();
             });
         })
     </script>
@@ -29,31 +63,19 @@
     <h3>Click on the steps to reveal the corresponding git commands for pushing a repo to GitHub.</h3>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
                 <ol>
-                    <li id="step1">Create local directory that will house your GitHub project</li>
-                    <li>Navigate into that directory and initialize a new Git repository</li>
-                    <li>Create a new file within project folder</li>
-                    <li>Stage new file</li>
-                    <li>Check status of changes</li>
-                    <li>Commit changes to local git repository (with a message included)</li>
-                    <li>Go to GitHub and create new remote repository then link local and remote repos</li>
-                    <li>Switch 'master' branch to 'main' branch</li>
-                    <li>Push your local repo to your remote repo on GitHub</li>
+                    <li id="step1">Create local directory that will house your GitHub project<h5 id="answer1">mkdir project_name</h5></li>
+                    <li id="step2">Navigate into that directory and initialize a new Git repository<h5 id="answer2">cd project_name THEN git init</h5></li>
+                    <li id="step3">Create a new file within project folder<h5 id="answer3">touch index.html</h5></li>
+                    <li id="step4">Stage new file<h5 id="answer4">git add .</h5></li>
+                    <li id="step5">Check status of changes <h5 id="answer5">git status</h5></li>
+                    <li id="step6">Commit changes to local git repository (with a message included) <h5 id="answer6">git commit -m "first commit"</h5></li>
+                    <li id="step7">Go to GitHub and create new remote repository then link local and remote repos <h5 id="answer7">git remote add origin {https://repo_name}</h5></li>
+                    <li id="step8">Switch 'master' branch to 'main' branch <h5 id="answer8">git branch -M main</h5></li>
+                    <li id="step9">Push your local repo to your remote repo on GitHub <h5 id="answer9">git push -u origin main</h5></li>
                 </ol>
-            </div>
-            <div class="col-sm-6">
-                <ul>
-                    <li id="answer1">mkdir project_name</li>
-                    <li>cd project_name <span>then</span> git init</li>
-                    <li>touch index.html</li>
-                    <li>git add .</li>
-                    <li>git status</li>
-                    <li>git commit -m "first commit" </li>
-                    <li>git remote add origin {https://repo_name}</li>
-                    <li>git branch -M main</li>
-                    <li>git push -u origin main</li>
-                </ul>
+                <button>Show All Commands</button>
             </div>
         </div>
     </div>
