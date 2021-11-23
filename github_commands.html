@@ -5,25 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet" />
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Bootstrap Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
     <title>Git Commands Guide</title>
     <script type="text/javascript">
         $('document').ready(function () {
             console.log("jQuery is successfully running.");
             $('h5').hide();
             console.log('all answers are being hidden');
-            $('ol li').hover(function(){
+            $('ol li').hover(function () {
                 $('ol li').css('cursor', 'pointer');
                 $('ol li h5').css('cursor', 'auto');
             })
             // Total answer reveal btn
-            $('button').click(function(){
+            $('#show_answers').click(function () {
                 $('h5').fadeIn();
+            })
+            $('#hide_answers').click(function () {
+                $('h5').fadeOut();
             })
 
             // Answer reveal for individual steps
@@ -61,21 +70,38 @@
 <body>
     <h1>GitHub Commands Study Guide</h1>
     <h3>Click on the steps to reveal the corresponding git commands for pushing a repo to GitHub.</h3>
+    <hr>
     <div class="container">
-        <div class="row">
+
+        <div class="row text-center">
             <div class="col-sm-12">
                 <ol>
-                    <li id="step1">Create local directory that will house your GitHub project<h5 id="answer1">mkdir project_name</h5></li>
-                    <li id="step2">Navigate into that directory and initialize a new Git repository<h5 id="answer2">cd project_name THEN git init</h5></li>
-                    <li id="step3">Create a new file within project folder<h5 id="answer3">touch index.html</h5></li>
-                    <li id="step4">Stage new file<h5 id="answer4">git add .</h5></li>
-                    <li id="step5">Check status of changes <h5 id="answer5">git status</h5></li>
-                    <li id="step6">Commit changes to local git repository (with a message included) <h5 id="answer6">git commit -m "first commit"</h5></li>
-                    <li id="step7">Go to GitHub and create new remote repository then link local and remote repos <h5 id="answer7">git remote add origin {https://repo_name}</h5></li>
-                    <li id="step8">Switch 'master' branch to 'main' branch <h5 id="answer8">git branch -M main</h5></li>
-                    <li id="step9">Push your local repo to your remote repo on GitHub <h5 id="answer9">git push -u origin main</h5></li>
+                    <li id="step1">Create local directory that will house your GitHub project<h5 id="answer1">mkdir
+                            project_name</h5>
+                    </li>
+                    <li id="step2">Navigate into that directory and initialize a new Git repository<h5 id="answer2">cd
+                            project_name THEN git init</h5>
+                    </li>
+                    <li id="step3">Create a new file within project folder<h5 id="answer3">touch index.html</h5>
+                    </li>
+                    <li id="step4">Stage new file<h5 id="answer4">git add .</h5>
+                    </li>
+                    <li id="step5">Check status of changes <h5 id="answer5">git status</h5>
+                    </li>
+                    <li id="step6">Commit changes to local git repository (with a message included) <h5 id="answer6">git
+                            commit -m "first commit"</h5>
+                    </li>
+                    <li id="step7">Go to GitHub and create new remote repository then link local and remote repos <h5
+                            id="answer7">git remote add origin {https://repo_name}</h5>
+                    </li>
+                    <li id="step8">Switch 'master' branch to 'main' branch <h5 id="answer8">git branch -M main</h5>
+                    </li>
+                    <li id="step9">Push your local repo to your remote repo on GitHub <h5 id="answer9">git push -u
+                            origin main</h5>
+                    </li>
                 </ol>
-                <button>Show All Commands</button>
+                <button id="show_answers">Show All Answers</button>
+                <button id="hide_answers">Hide All Answers</button>
             </div>
         </div>
     </div>
