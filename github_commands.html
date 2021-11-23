@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,22 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Bootstrap Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <title>Git Commands Guide</title>
     <script type="text/javascript">
-    $('document').ready(function(){
-        console.log("jQuery is successfully running.");
-        $('ul li').hide();
-        console.log('all answers are being hidden');
-    })
+        $('document').ready(function () {
+            console.log("jQuery is successfully running.");
+            $('ul li').hide();
+            console.log('all answers are being hidden');
+            $('ol li').click(function () {
+                $('ul li').fadeIn();
+            });
+        })
     </script>
 </head>
+
 <body>
     <h1>GitHub Commands Study Guide</h1>
     <h3>Click on the steps to reveal the corresponding git commands for pushing a repo to GitHub.</h3>
@@ -25,16 +32,32 @@
             <div class="col-sm-6">
                 <ol>
                     <li id="step1">Create local directory that will house your GitHub project</li>
+                    <li>Navigate into that directory and initialize a new Git repository</li>
+                    <li>Create a new file within project folder</li>
+                    <li>Stage new file</li>
+                    <li>Check status of changes</li>
+                    <li>Commit changes to local git repository (with a message included)</li>
+                    <li>Go to GitHub and create new remote repository then link local and remote repos</li>
+                    <li>Switch 'master' branch to 'main' branch</li>
+                    <li>Push your local repo to your remote repo on GitHub</li>
                 </ol>
             </div>
             <div class="col-sm-6">
                 <ul>
-                    <li id="command1">mkdir project_name</li>
+                    <li id="answer1">mkdir project_name</li>
+                    <li>cd project_name <span>then</span> git init</li>
+                    <li>touch index.html</li>
+                    <li>git add .</li>
+                    <li>git status</li>
+                    <li>git commit -m "first commit" </li>
+                    <li>git remote add origin {https://repo_name}</li>
+                    <li>git branch -M main</li>
+                    <li>git push -u origin main</li>
                 </ul>
             </div>
         </div>
-
     </div>
 
 </body>
+
 </html>
